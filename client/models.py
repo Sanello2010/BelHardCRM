@@ -139,14 +139,14 @@ class Telephone(models.Model):
 ######Poland Task 1####### Strauzov###########
 
 class Vacancy(models.Model):
-    state = models.CharField(max_lenght=100)
-    salary = models.CharField(max_lenght=20)
-    organization = models.CharField(max_lenght=100)
-    address = models.CharField(max_lenght=200, null=True)
-    employment = models.CharField(max_lenght=100, null=True)
-    description = models.CharField(msx_lenght=1000)
-    skills = models.CharField(max_lenght=100, null=True)
-    requirements = models.CharField(max_lenght=1000, null=True)
-    duties = models.CharField(max_lenght=1000, null=True)
-    conditions = models.CharField(max_lenght=1000, null=True)
+    state = models.CharField(max_length=100)
+    salary = models.CharField(max_length=20)
+    organization = models.CharField(max_length=100)
+    address = models.CharField(max_length=200, null=True)
+    employment = models.CharField(max_length=100, null=True)
+    description = models.CharField(max_length=1000)
+    skills = models.CharField(max_length=100, null=True)
+    requirements = models.CharField(max_length=1000, null=True)
+    duties = models.CharField(max_length=1000, null=True)
+    conditions = models.CharField(max_length=1000, null=True)
 
