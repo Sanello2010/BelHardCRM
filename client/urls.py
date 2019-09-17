@@ -4,5 +4,6 @@ from .views import *
 
 
 urlpatterns = [
-    path('', vacancy)
+    path('', vacancies_list),
+    prth('vacancy/<id>/', vacancy_detail, name='vacancy_detail_url'),
 ]

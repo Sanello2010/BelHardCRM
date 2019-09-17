@@ -144,9 +144,14 @@ class Vacancy(models.Model):
     organization = models.CharField(max_length=100)
     address = models.CharField(max_length=200, null=True)
     employment = models.CharField(max_length=100, null=True)
-    description = models.CharField(max_length=1000)
+    description = models.TextField(max_length=1000)
     skills = models.CharField(max_length=100, null=True)
-    requirements = models.CharField(max_length=1000, null=True)
-    duties = models.CharField(max_length=1000, null=True)
+    requirements = models.TextField(max_length=1000, null=True)
+    duties = models.TextField(max_length=1000, null=True)
     conditions = models.CharField(max_length=1000, null=True)
+
+    def __str__(self):
+        return '{}'.format(self.title)
+
+
 

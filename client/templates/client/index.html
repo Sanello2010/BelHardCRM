@@ -5,6 +5,20 @@
 {% endblock%}
 
 {% block content %}
-     <h1> Client page </h1>
-    <h1> {{ salary }} </h1>
+     <h1 class="mb-5"> Vacancies: </h1>
+
+    {% for vacancy in vacansies %}
+
+        <div class="card mb-4">
+            <div class="card-header">
+                {{ vacancy.organization }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ vacancy.state }}</h5>
+                <p class="card-text">{{ vacancy.description | truncatewords:20 }}</p>
+                <a href="{% url 'vacancy_detail_url' id=vacancy.id %}" class="btn btn-light">Подробнее</a>
+            </div>
+        </div>
+
+    {% endfor %}
 {% endblock %}
