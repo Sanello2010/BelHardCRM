@@ -140,6 +140,7 @@ class Telephone(models.Model):
 
 class Vacancy(models.Model):
     state = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True)
     salary = models.CharField(max_length=20)
     organization = models.CharField(max_length=100)
     address = models.CharField(max_length=200, null=True)
@@ -148,10 +149,10 @@ class Vacancy(models.Model):
     skills = models.CharField(max_length=100, null=True)
     requirements = models.TextField(max_length=1000, null=True)
     duties = models.TextField(max_length=1000, null=True)
-    conditions = models.CharField(max_length=1000, null=True)
+    conditions = models.TextField(max_length=1000, null=True)
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return '{}'.format(self.state)
 
 
 
