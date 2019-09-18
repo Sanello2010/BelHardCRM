@@ -16,7 +16,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ vacancy.state }}</h5>
                 <p class="card-text">{{ vacancy.description | truncatewords:20 }}</p>
-                <a href="{% url 'vacancy_detail_url' slug=vacancy.slug %}" class="btn btn-light">Подробнее</a>
+                <a href="{% url 'vacancy_detail_url' slug=vacancy.slug %}" class="btn btn-secondary">Подробнее</a>
             </div>
         </div>
 

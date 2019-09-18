@@ -3,7 +3,7 @@ from .models import Vacancy
 
 class VacancyAdmin(admin.ModelAdmin):
     list_display = (
-        'state', 'organization', 'address', 'employment', 'description',
+        'state', 'organization', 'slug', 'address', 'employment', 'description',
         'skills', 'requirements', 'duties', 'conditions',
     )
     list_display_links = (
